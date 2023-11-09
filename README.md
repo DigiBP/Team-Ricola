@@ -43,6 +43,10 @@ When visiting the pharmacy, the pharmaceutical assistant enquires about the pati
 
 
 ### Benefits
+- The chatbot makes it easier to enquire about medication without having to go to the pharmacy. 
+- Enables an efficient process for obtaining medication. 
+- Ordering medication is independent of time and place. 
+
 
 ### Scenario
 
