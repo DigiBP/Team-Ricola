@@ -8,11 +8,9 @@
 | Sarah Meyer  | sarah.meyer@students.fhnw.ch  |
 | Shathvika Karunakaran  | shathvika.karunakaran@students.fhnw.ch  |
 
-
 ## Coach
 - Andreas Martin
 - Charuta Panda
-
 
 ## Introduction
 The drug and pharmacy system in Switzerland is similar to those in other countries, but with some differences. Medicinal products that promise to cure specific ailments can only be purchased in pharmacies or rarely in "Drogerien". The drugs are categorized based on whether they require a prescription or are available over-the-counter (OTC). Commonly used drugs for minor ailments such as headaches and coughs can be purchased without a prescription. However, prescription from a medical doctor is required for drugs like antibiotics, pain relievers with high dosage, and drugs used in treating cancer.
@@ -35,20 +33,37 @@ When visiting the pharmacy, the pharmaceutical assistant enquires about the pati
 #### Despcription for the Use Case when the patient needs a prescrption for the drug 
 When visiting the pharmacy, the pharmaceutical assistant enquires about the patient's needs. If the patient does not know which medication they need, the pharmaceutical assistant asks about the symptoms. Depending on the symptoms, she checks whether the medication is available without a prescription or whether it requires a visit to the doctor. If it requires a prescription, the pharmacy assistant advises the patient to go to their GP. 
 
-### Issues with the current As-Is Process
+___________
 
+### Issues with the current As-Is Process
 
 ## To-Be Process
 <img width="539" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/bb5adcf1-55fe-43b4-9e1b-4a0608e35785">
 
 
 ### Benefits
-- The chatbot makes it easier to enquire about medication without having to go to the pharmacy. 
-- Enables an efficient process for obtaining medication. 
-- Ordering medication is independent of time and place. 
 
+**Time-saving:** Ordering medication through the chatbot is quick and convenient, eliminating the need to visit a pharmacy in person and saving time. 
+
+**24/7 availability:** The chatbot is accessible round the clock, making it particularly helpful for those who require medication outside regular business hours. Ease of use: With an intuitive user interface and clear instructions, the chatbot enhances the user experience and simplifies the ordering process. 
+
+**Quick responses:** The chatbot can promptly answer queries, provide medication information, and offer recommendations, improving the overall customer experience. 
+
+**Automated order processing:** By automating the ordering process, the chatbot minimizes human error and streamlines the purchasing process, making it more efficient. 
+
+**Discretion:** The chatbot provides a private and discreet setting for people who prefer to discuss their health issues confidentially. 
+
+**Personalized recommendations:** By analyzing previous orders, the chatbot can make personalized medication recommendations, enhancing customer satisfaction. 
+
+**Information on side effects and interactions:** The chatbot can provide information on medication side effects and drug interactions to ensure customer safety. 
+
+**Scalability:** The chatbot can handle multiple user interactions simultaneously, making it more scalable than relying solely on human staff.
+
+___________
 
 ### Scenario
+
+___________
 
 ## Fully automated process
 
