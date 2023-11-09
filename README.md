@@ -35,7 +35,25 @@ When visiting the pharmacy, the pharmaceutical assistant enquires about the pati
 
 ___________
 
-### Issues with the current As-Is Process
+### Issues with the current As-Is Proces
+**Waiting times:** Pharmacies can have long waiting times, especially at peak times. This can be inconvenient, especially if you need urgent medication.
+
+**Limited opening hours:** Pharmacies often have limited opening hours, which means patients may have difficulty getting their medication outside of regular business hours or on weekends.
+
+**Personal presence required:** To pick up medication, patients usually have to physically go to the pharmacy. This can be a challenge for people with limited mobility or chronic illnesses.
+
+**Confidentiality and stigma:** Some patients may feel uncomfortable asking for or picking up prescription or sensitive medications at the pharmacy due to privacy concerns or stigma.
+
+**Medication errors:** Although pharmacies strive to avoid medication dispensing errors, occasionally errors in dosing, medication selection or labeling can occur.
+
+**Limited consultation:** In busy pharmacies, the time pharmacists have available for consultation may be limited. This can lead to patients not being adequately informed about the correct use and side effects of their medication.
+
+**Cost:** Prices for medications can vary in different pharmacies and some medications can be expensive, especially if they are not covered by health insurance.
+
+**Language barrier:** Several languages are spoken in Switzerland and this can lead to communication problems, especially if the pharmacist or staff do not speak the patient's native language.
+___________
+
+
 
 ## To-Be Process
 <img width="539" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/bb5adcf1-55fe-43b4-9e1b-4a0608e35785">
@@ -63,7 +81,7 @@ ___________
 
 ### Scenario
 
-___________
+
 
 ## Fully automated process
 
