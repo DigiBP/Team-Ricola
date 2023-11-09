@@ -18,7 +18,7 @@
 The drug and pharmacy system in Switzerland is similar to those in other countries, but with some differences. Medicinal products that promise to cure specific ailments can only be purchased in pharmacies or rarely in "Drogerien". The drugs are categorized based on whether they require a prescription or are available over-the-counter (OTC). Commonly used drugs for minor ailments such as headaches and coughs can be purchased without a prescription. However, prescription from a medical doctor is required for drugs like antibiotics, pain relievers with high dosage, and drugs used in treating cancer.
 
 ## Goal
-
+Our aim in this project is to optimize and digitalize the process of obtaining medication. The tool should be user-friendly for patients and employees.
 ## Current As-Is Process
 <img width="1122" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/ce3dcb97-1801-45e7-ac64-d286e8676093">
 
