@@ -20,7 +20,7 @@ The drug and pharmacy system in Switzerland is similar to those in other countri
 ## Goal
 
 ## Current As-Is Process
-<img width="1312" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/123911f9-b8cf-4ae7-baef-2bd2e1507e85">
+<img width="1122" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/ce3dcb97-1801-45e7-ac64-d286e8676093">
 
 #### Description for the Use Case when the patient knows what kind of drug he needs and has a prescription for it 
 Upon visiting the pharmacy, the pharmaceutical assistant inquires about the patient's needs. If the patient is aware of the required medication, the assistant requests a prescription for verification. Once the specialist's prescription is validated, the assistant prepares the medication, ensuring it is properly packaged. Depending on circumstances, further verification by the specialist may occur. Following this, the medication is dispensed to the patient.
