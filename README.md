@@ -39,6 +39,8 @@ When visiting the pharmacy, the pharmaceutical assistant enquires about the pati
 
 
 ## To-Be Process
+<img width="539" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/bb5adcf1-55fe-43b4-9e1b-4a0608e35785">
+
 
 ### Benefits
 
