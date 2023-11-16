@@ -8,7 +8,7 @@
 | Sarah Meyer  | sarah.meyer@students.fhnw.ch  |
 | Shathvika Karunakaran  | shathvika.karunakaran@students.fhnw.ch  |
 
-## Links
+## Links 🔗
 - API: https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%201-54d9685dbc4145cdbc87804d1ff98b8b? (Version Sarah 11.11.)
 - Chatbot: Voiceflow
 
@@ -19,7 +19,7 @@
 ## Introduction
 The drug and pharmacy system in Switzerland is similar to those in other countries, but with some differences. Medicinal products that promise to cure specific ailments can only be purchased in pharmacies or rarely in "Drogerien". The drugs are categorized based on whether they require a prescription or are available over-the-counter (OTC). Commonly used drugs for minor ailments such as headaches and coughs can be purchased without a prescription. However, prescription from a medical doctor is required for drugs like antibiotics, pain relievers with high dosage, and drugs used in treating cancer.
 
-## Goal
+## Goal 🎯
 Our aim in this project is to optimize and digitalize the process of obtaining medication. The tool should be user-friendly for patients and employees.
 ## Current As-Is Process
 <img width="1122" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/ce3dcb97-1801-45e7-ac64-d286e8676093">
@@ -39,7 +39,7 @@ When visiting the pharmacy, the pharmaceutical assistant enquires about the pati
 
 ___________
 
-### Issues with the current As-Is Proces
+### Issues with the current As-Is Proces 🚩
 **Waiting times:** Pharmacies can have long waiting times, especially at peak times. This can be inconvenient, especially if you need urgent medication.
 
 **Limited opening hours:** Pharmacies often have limited opening hours, which means patients may have difficulty getting their medication outside of regular business hours or on weekends.
@@ -63,7 +63,7 @@ ___________
 <img width="539" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/bb5adcf1-55fe-43b4-9e1b-4a0608e35785">
 
 
-### Benefits
+### Benefits ✔️
 
 **Time-saving:** Ordering medication through the chatbot is quick and convenient, eliminating the need to visit a pharmacy in person and saving time. 
 
@@ -84,8 +84,7 @@ ___________
 ___________
 
 ### Scenario
-
-
+The patient goes to the doctor and receives a prescription for their medication. The order can be triggered by communicating with our chatbot. The pharmacy checks whether they have the medication and checks it using the dual control principle, then packs the medication and delivers it to the patient accordingly. 
 
 ## Fully automated process
 
