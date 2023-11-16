@@ -57,8 +57,6 @@ ___________
 **Language barrier:** Several languages are spoken in Switzerland and this can lead to communication problems, especially if the pharmacist or staff do not speak the patient's native language.
 ___________
 
-
-
 ## To-Be Process
 <img width="539" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/bb5adcf1-55fe-43b4-9e1b-4a0608e35785">
 
@@ -84,7 +82,11 @@ ___________
 ___________
 
 ### Scenario
-The patient goes to the doctor and receives a prescription for their medication. The order can be triggered by communicating with our chatbot. The pharmacy checks whether they have the medication and checks it using the dual control principle, then packs the medication and delivers it to the patient accordingly. 
+Scenario 1: Ordering medication 💊
+The patient goes to the doctor and receives a prescription for his medication. On the way home, the patient can order the medication by communicating with our chatbot. The pharmacy checks whether it has the medication in stock and checks it using the dual control principle, then packs it and delivers it to the patient accordingly. 
+
+Scenario 2: Booking an appointment/ teleconsult 👩🏻‍⚕️👨🏽‍⚕️
+The patient is not feeling well and decides to arrange an appointment with the pharmacy via the chatbot. To do this, he opens the chatbot and enters his available day and selects the appropriate time. When a suitable appointment is found, the patient can choose between a face-to-face or virtual appointment (teleconsult). The appointment is confirmed by sending an email to the pharmacy and patient.
 
 ## Fully automated process
 
