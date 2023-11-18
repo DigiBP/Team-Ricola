@@ -22,7 +22,7 @@ The drug and pharmacy system in Switzerland is similar to those in other countri
 ## Goal 🎯
 Our aim in this project is to optimize and digitalize the process of obtaining medication. The tool should be user-friendly for patients and employees.
 ## Current As-Is Process
-<img width="1122" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/ce3dcb97-1801-45e7-ac64-d286e8676093">
+<img width="1230" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/4d7c3c1b-e0b5-402d-9ba0-2036071f754c">
 
 #### Description for the Use Case when the patient knows what kind of drug he needs and has a prescription for it 
 Upon visiting the pharmacy, the pharmaceutical assistant inquires about the patient's needs. If the patient is aware of the required medication, the assistant requests a prescription for verification. Once the specialist's prescription is validated, the assistant prepares the medication, ensuring it is properly packaged. Depending on circumstances, further verification by the specialist may occur. Following this, the medication is dispensed to the patient.
