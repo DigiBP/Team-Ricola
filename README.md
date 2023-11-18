@@ -6,7 +6,7 @@
 | Adrian Altermatt  | adrian.altermatt@students.fhnw.ch  |
 | Jana Brzak  | jana.brzak@students.fhnw.ch  |
 | Sarah Meyer  | sarah.meyer@students.fhnw.ch  |
-| Shathvika Karunakaran  | shathvika.karunakaran@students.fhnw.ch  |
+| Shathvika Karunakaran  | shathvikashima.karunakaran@students.fhnw.ch  |
 
 ## Links 🔗
 - API: https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%201-54d9685dbc4145cdbc87804d1ff98b8b? (Version Sarah 11.11.)
