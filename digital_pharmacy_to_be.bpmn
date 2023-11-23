@@ -45,6 +45,8 @@
         <bpmn:flowNodeRef>Activity_18jq8fm</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0g79lfc</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1xfwg04</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1ai03x4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1b0gcfo</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:sequenceFlow id="Flow_18cennw" name="yes" sourceRef="Gateway_11s51ky" targetRef="Activity_1pbza76">
@@ -71,7 +73,7 @@
     </bpmn:exclusiveGateway>
     <bpmn:dataStoreReference id="DataStoreReference_0oy3r03" />
     <bpmn:parallelGateway id="Gateway_1azdg1g">
-      <bpmn:incoming>Flow_0etcrxu</bpmn:incoming>
+      <bpmn:incoming>Flow_0hizslq</bpmn:incoming>
       <bpmn:outgoing>Flow_0oplmnd</bpmn:outgoing>
       <bpmn:outgoing>Flow_1qhst8q</bpmn:outgoing>
     </bpmn:parallelGateway>
@@ -327,7 +329,7 @@ obj.reorder_started</camunda:script>
       <bpmn:outgoing>Flow_0y5r24f</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_04mnfvt" messageRef="Message_0vu68h4" />
     </bpmn:startEvent>
-    <bpmn:sequenceFlow id="Flow_0etcrxu" sourceRef="Activity_1xfwg04" targetRef="Gateway_1azdg1g" />
+    <bpmn:sequenceFlow id="Flow_0etcrxu" sourceRef="Activity_1xfwg04" targetRef="Gateway_1ai03x4" />
     <bpmn:serviceTask id="Activity_1xfwg04" name="Deduct Medication from Stock">
       <bpmn:extensionElements>
         <camunda:connector>
@@ -350,6 +352,18 @@ obj.reorder_started</camunda:script>
       <bpmn:incoming>Flow_13671kx</bpmn:incoming>
       <bpmn:outgoing>Flow_0etcrxu</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_1ai03x4" name="Medication in Storage" default="Flow_0hizslq">
+      <bpmn:incoming>Flow_0etcrxu</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hizslq</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0tot7kn</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0hizslq" sourceRef="Gateway_1ai03x4" targetRef="Gateway_1azdg1g" />
+    <bpmn:sequenceFlow id="Flow_0tot7kn" sourceRef="Gateway_1ai03x4" targetRef="Event_1b0gcfo">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${response=="Not enough left"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="Event_1b0gcfo">
+      <bpmn:incoming>Flow_0tot7kn</bpmn:incoming>
+    </bpmn:endEvent>
   </bpmn:process>
   <bpmn:message id="Message_0vu68h4" name="Message_0vu68h4" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
@@ -464,6 +478,15 @@ obj.reorder_started</camunda:script>
       <bpmndi:BPMNShape id="BPMNShape_14jdwkq" bpmnElement="Activity_1xfwg04">
         <dc:Bounds x="1430" y="1250" width="100" height="80" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1ai03x4_di" bpmnElement="Gateway_1ai03x4" isMarkerVisible="true">
+        <dc:Bounds x="1615" y="1265" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1608" y="1322" width="65" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1b0gcfo_di" bpmnElement="Event_1b0gcfo">
+        <dc:Bounds x="1622" y="1162" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_18cennw_di" bpmnElement="Flow_18cennw">
         <di:waypoint x="965" y="790" />
@@ -582,7 +605,15 @@ obj.reorder_started</camunda:script>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0etcrxu_di" bpmnElement="Flow_0etcrxu">
         <di:waypoint x="1530" y="1290" />
+        <di:waypoint x="1615" y="1290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hizslq_di" bpmnElement="Flow_0hizslq">
+        <di:waypoint x="1665" y="1290" />
         <di:waypoint x="1805" y="1290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tot7kn_di" bpmnElement="Flow_0tot7kn">
+        <di:waypoint x="1640" y="1265" />
+        <di:waypoint x="1640" y="1198" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_1ghglbh_di" bpmnElement="Participant_076x1wc" isHorizontal="true">
         <dc:Bounds x="160" y="80" width="3011" height="60" />
