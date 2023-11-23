@@ -155,6 +155,22 @@ For unknown drugs, the process involves checking the medication request, verifyi
 
 Separately, for appointments or teleconsults, a date is requested, and upon finding a suitable slot, it is confirmed. Types of appointments vary from general measurements to vaccinations, COVID testing, general health checks, prescription of birth control pills, ear piercing, or a prescription consultation. Each service pathway concludes with patient data collection, invoicing, and ends the conversation, ensuring a clear and efficient resolution to the customer's needs.
 
+### Booking an Appointment through the Chatbot
+<img width="965" alt="Bildschirmfoto 2023-11-23 um 18 35 30" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/da76a44c-5e20-4f8d-966a-1cfea2e33845">
+#### Objective:
+To document the automated appointment scheduling system for pharmacAI, detailing the digitalized interaction between the patient and the chatbot, and the subsequent backend processes using Google's Free Busy API, Make, and Camunda.
+
+#### Process Flow:
+
+1. Patient-Chabot Interaction: The patient starts the conversation with the chatbot by requesting to book an appointment.
+2. Date Request and Retrieval: The chatbot asks the patient for a preferred appointment date. It then sends a POST request to Google's **Free Busy API** to check for available slots.
+3. Time Slot Display and Selection: Voiceflow displays the list of available time slots to the customer, who then selects a suitable time slot for the appointment.
+4. Appointment Objective Inquiry: The customer has a choice between the most common pharmacy inquiries (e.g. vaccination recommendations).
+5. Customer Information Collection: The personal information for the booking of the appointment is gathered, which is necessary for the invoice generation.
+6. Data Submission and Event Creation: This gathered data is sent to Make via a POST request, from where on the setting of an appointment is triggered (see also: Make Scenario 1).
+7. Workflow Management with Camunda: Simultaneously, a POST request is sent to Camunda to initiate the appointment management workflow.
+Camunda handles the necessary steps to ensure the appointment is held successfully (User Task: Hold Appointment) and triggers the invoice generation (Service Task: Prepare Invoice) after the appointment.
+
 ## Make Scenarios
 ### Scenario 1: Invoice Generation
 This workflow automates the process of capturing data from the chatbot via a webhook and directly inputting that data into a Google Sheets document, from which an invoice can be generated. 
