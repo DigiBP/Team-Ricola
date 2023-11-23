@@ -146,7 +146,11 @@ ___________
 
 <img width="1550" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/5099805b-4972-4559-a6ec-00e350b73b9d">
 
+The flowchart outlines a structured process for a pharmacy or medical service to handle customer needs. It starts by assessing whether the customer knows the drug they need. If they do, the service can directly order the medication, or set up an appointment or teleconsult. In cases where over-the-counter medication is sufficient, patient data is collected, verified, and an invoice is sent, concluding the interaction. For prescription medications, symptoms are discussed, a drug is recommended, and upon confirmation, either an over-the-counter drug is provided or a prescription is requested, followed by data collection and invoicing.
 
+For unknown drugs, the process involves checking the medication request, verifying patient identity, and then either confirming the drug recommendation or proceeding to prescription if necessary.
+
+Separately, for appointments or teleconsults, a date is requested, and upon finding a suitable slot, it is confirmed. Types of appointments vary from general measurements to vaccinations, COVID testing, general health checks, prescription of birth control pills, ear piercing, or a prescription consultation. Each service pathway concludes with patient data collection, invoicing, and ends the conversation, ensuring a clear and efficient resolution to the customer's needs.
 ___________
 
 ### Scenario
