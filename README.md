@@ -34,18 +34,49 @@ Our aim in this project is to optimize and digitalize the process of obtaining m
 ## Current As-Is Process
 <img width="1230" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/4d7c3c1b-e0b5-402d-9ba0-2036071f754c">
 
-#### Description for the Use Case when the patient knows what kind of drug he needs and has a prescription for it 
-Upon visiting the pharmacy, the pharmaceutical assistant inquires about the patient's needs. If the patient is aware of the required medication, the assistant requests a prescription for verification. Once the specialist's prescription is validated, the assistant prepares the medication, ensuring it is properly packaged. Depending on circumstances, further verification by the specialist may occur. Following this, the medication is dispensed to the patient.
+1. **Customer Arrival:** The customer arrives at the pharmacy.
 
-#### Despription for the Use Case when the patient knows what kind of drug he needs but does not have a prescription
-When visiting the pharmacy, the pharmaceutical assistant enquires about the patient's needs. If the patient knows what medication they need, the assistant asks for a prescription that they can check. If the patient needs a prescription, the pharmaceutical assistant must tell the patient to bring it with them on their next visit. 
-The pharmaceutical assistant prepares the medication and ensures that it is properly packaged.  The medication is checked by the specialist before it is dispensed to the patient. If the medication is not in stock, the pharmacy will order the medication and notify the patient when the medication arrives. 
+2. **Needs Assessment:**
+- The assistent assesses the customer's needs.
+- Decision as to whether the customer is coming for a medication or an appointment.
 
-#### Despription for the Use Case when the patient does not know what kind of drug he needs
-When visiting the pharmacy, the pharmaceutical assistant enquires about the patient's needs. If the patient does not know which medication they need, the pharmaceutical assistant asks about the symptoms. Depending on the symptoms, she checks whether the medication is available without a prescription or whether it requires a visit to the doctor. If it is over-the-counter, the pharmacy assistant prepares the medication and ensures that it is properly packaged.  The medication is checked by the specialist before the medication is dispensed to the patient. If the medication is not in stock, the pharmacy orders the medication and notifies the patient when the medication arrives. 
+3. **Medication Decision Making:**
+- If the customer is there for medication, it's decided whether they know which medication they need and whether they have a prescription.
+- If the customer has a prescription, they are asked to present it.
 
-#### Despcription for the Use Case when the patient needs a prescrption for the drug 
-When visiting the pharmacy, the pharmaceutical assistant enquires about the patient's needs. If the patient does not know which medication they need, the pharmaceutical assistant asks about the symptoms. Depending on the symptoms, she checks whether the medication is available without a prescription or whether it requires a visit to the doctor. If it requires a prescription, the pharmacy assistant advises the patient to go to their GP. 
+4. **Prescription Verification:**
+- If a prescription is required, this will be checked.
+
+5. **Medication Preparation:**
+
+- It is determined whether the medication is pre-packaged.
+- If so, the medication is prepared.
+- If the medication is not pre-packaged, it is prepared accordingly.
+
+6. **Inventory Check:**
+
+- It is checked whether the medication is in stock.
+- If the medication is in stock, it is handed over to the customer after verification by a second person.
+- If the medication is not in stock, it is ordered.
+
+7. **Customer Notification:**
+
+- The customer is informed about the necessity of a prescription if required.
+- The customer is notified when the medication is ready for pickup or has arrived.
+
+
+8. **Medication Dispensing:**
+
+- If the medication is available and verified, it is dispensed to the customer.
+
+9. **Appointment Scheduling:**
+    
+- If the customer desires an appointment, different services such as measurements, vaccinations, coronavirus tests, medication checks, contraception counseling, and ear piercing are reviewed.
+- The customer selects the desired service, and an appointment is arranged based on their needs.
+
+10. **Service Execution:**
+    
+- The selected service is then executed according to the arrangement.
 
 ___________
 
@@ -64,7 +95,6 @@ ___________
 
 ## To-Be Process
 <img width="539" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/bb5adcf1-55fe-43b4-9e1b-4a0608e35785">
-
 
 ### Benefits ✔️
 
