@@ -142,6 +142,11 @@ ___________
 
 **Scalability:** The chatbot can handle multiple user interactions simultaneously, making it more scalable than relying solely on human staff.
 
+## Chatbot
+
+<img width="1550" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/5099805b-4972-4559-a6ec-00e350b73b9d">
+
+
 ___________
 
 ### Scenario
