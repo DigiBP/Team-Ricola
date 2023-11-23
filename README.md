@@ -21,6 +21,16 @@ The drug and pharmacy system in Switzerland is similar to those in other countri
 
 ## Goal 🎯
 Our aim in this project is to optimize and digitalize the process of obtaining medication. The tool should be user-friendly for patients and employees.
+
+## Implementation
+- Camunda
+- Voiceflow
+- Voiceglow
+- Make
+- Google Calender
+- Google Forms
+- Flask
+
 ## Current As-Is Process
 <img width="1230" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/4d7c3c1b-e0b5-402d-9ba0-2036071f754c">
 
@@ -83,11 +93,16 @@ ___________
 
 ### Scenario
 Scenario 1: Ordering medication 💊
+
 The patient goes to the doctor and receives a prescription for his medication. On the way home, the patient can order the medication by communicating with our chatbot. The pharmacy checks whether it has the medication in stock and checks it using the dual control principle, then packs it and delivers it to the patient accordingly. 
 
 Scenario 2: Booking an appointment/ teleconsult 👩🏻‍⚕️👨🏽‍⚕️
+
 The patient is not feeling well and decides to arrange an appointment with the pharmacy via the chatbot. To do this, he opens the chatbot and enters his available day and selects the appropriate time. When a suitable appointment is found, the patient can choose between a face-to-face or virtual appointment (teleconsult). The appointment is confirmed by sending an email to the pharmacy and patient.
 
 ## Fully automated process
 
 ## Conclusion
+
+![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/89074b44-a79e-43e7-828e-0cb6210f4f96)
+
