@@ -1,0 +1,11 @@
+id,name,stock,prescription_needed,ordered
+1,Aspirin,14,No,false
+2,Paracetamol,27,No,false
+3,Ibuprofen,10,No,false
+4,Loratadine,23,No,false
+5,Omeprazole,18,No,false
+6,Amoxicillin,8,Yes,false
+7,Fluoxetine,30,Yes,false
+8,Atorvastatin,11,No,false
+9,Hydrochlorothiazide,20,Yes,false
+10,Metformin,13,No,false
