@@ -94,7 +94,39 @@ ___________
 ___________
 
 ## To-Be Process
-<img width="539" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/bb5adcf1-55fe-43b4-9e1b-4a0608e35785">
+![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/fddf1507-f256-41c8-b833-5b499452067a)
+
+1. **Service Start:**
+- The process begins when the customer interacts with the chatbot.
+
+3. **Determining Service Type:**
+- The chatbot determines whether the customer needs medication or an appointment.
+
+4. **Consulting a Prescription:**
+- If medication is required, the chatbot assesses whether a prescription is necessary.
+- If a prescription is needed, the chatbot proceeds to check the prescription.
+
+5. **Prescription Checking and Drug Preparation:**
+- Upon confirmation of the prescription, the system prepares the drugs.
+- If the prescription is not required, the system directly prepares the drugs.
+
+6. **Inventory Management:**
+- The system checks if the medication is in stock.
+- If the stock is sufficient, the order continues.
+- If the stock is insufficient, the system triggers a reorder flow, which includes reordering low stock, restocking, and updating the inventory.
+
+7. **Appointment Handling:**
+- If an appointment is needed, the chatbot helps to book the appointment.
+
+8. **Order Verification and Packaging:**
+- The system verifies the order.
+- If the order is correct, the package is prepared for shipping.
+
+9. **Invoice Preparation:**
+- The system prepares an invoice for the customer.
+
+10. **Order Completion:**
+- The order is finalized, and the process concludes with the customer being notified that their order has been processed.
 
 ### Benefits ✔️
 
