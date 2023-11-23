@@ -9,11 +9,12 @@
 | Shathvika Karunakaran  | shathvikashima.karunakaran@students.fhnw.ch  |
 
 ## Links 🔗
-- API: https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%201-54d9685dbc4145cdbc87804d1ff98b8b? (Version Sarah 11.11.)
-- Chatbot: Voiceflow
+- Medication Stock API: https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%202-73dce108c691468dbef96242504c074b?
+- Chatbot: Voiceflow -> Version live on https://digibp.github.io/Team-Ricola/
 - PharmacAI Accounting: Google Sheets https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0
 - PharmacAI Invoice: Google Docs https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit
 - PharmacAI Google Calendar: https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ
+- PharmacAI Apps Script: https://script.google.com/u/0/home/projects/1oZgKnxqsioHXGj6jILQQhcJkjZK_xmdxESsNL-3TSOj9LsOHmKzSZcob/edit
 
 ## Coach
 - Andreas Martin
@@ -157,13 +158,14 @@ Separately, for appointments or teleconsults, a date is requested, and upon find
 
 ### Booking an Appointment through the Chatbot
 <img width="965" alt="Bildschirmfoto 2023-11-23 um 18 35 30" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/da76a44c-5e20-4f8d-966a-1cfea2e33845">
+
 #### Objective:
 To document the automated appointment scheduling system for pharmacAI, detailing the digitalized interaction between the patient and the chatbot, and the subsequent backend processes using Google's Free Busy API, Make, and Camunda.
 
 #### Process Flow:
 
-1. Patient-Chabot Interaction: The patient starts the conversation with the chatbot by requesting to book an appointment.
-2. Date Request and Retrieval: The chatbot asks the patient for a preferred appointment date. It then sends a POST request to Google's **Free Busy API** to check for available slots.
+1. Patient-Chatbot Interaction: The patient starts the conversation with the chatbot by requesting to book an appointment.
+2. Date Request and Retrieval: The patient is asked for his preferred appointment date. It then sends a POST request to Google's **Free Busy API** to check for available slots.
 3. Time Slot Display and Selection: Voiceflow displays the list of available time slots to the customer, who then selects a suitable time slot for the appointment.
 4. Appointment Objective Inquiry: The customer has a choice between the most common pharmacy inquiries (e.g. vaccination recommendations).
 5. Customer Information Collection: The personal information for the booking of the appointment is gathered, which is necessary for the invoice generation.
@@ -171,12 +173,17 @@ To document the automated appointment scheduling system for pharmacAI, detailing
 7. Workflow Management with Camunda: Simultaneously, a POST request is sent to Camunda to initiate the appointment management workflow.
 Camunda handles the necessary steps to ensure the appointment is held successfully (User Task: Hold Appointment) and triggers the invoice generation (Service Task: Prepare Invoice) after the appointment.
 
+<img width="392" alt="Bildschirmfoto 2023-11-23 um 19 52 37" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/76df3d0a-34d8-4ba8-af2e-9482cb7622d7">
+<img width="396" alt="Bildschirmfoto 2023-11-23 um 19 52 21" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/acb2b35c-eb8b-4e79-9383-870c0959f61b">
+
+POST Request to the Google Free Busy API
+
 ## Make Scenarios
 ### Scenario 1: Invoice Generation
 This workflow automates the process of capturing data from the chatbot via a webhook and directly inputting that data into a Google Sheets document, from which an invoice can be generated. 
 - Webhook Trigger: This is the starting point of the workflow. We have set up a custom webhook that waits for a POST request that is sent from the chatbot. When the webhook receives the JSON data, it triggers the automation.
 - Google Sheets Action: The processed data is then sent to the Google Sheets document "PharmacAI Accounting" (https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0). The workflow takes the data from the webhook and adds a new row to the Google Sheets document with the data mapped to the appropriate columns.
-- Google Apps Script Execution: After the data is entered into Google Sheets, a Google Apps Script is triggered via "On Changed" trigger action. . The script processes the data in the new Google Sheets row and fills out our Google Docs invoice template "PharmacAI Invoice" (https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit). 
+- Google Apps Script Execution: After the data is entered into Google Sheets, a Google Apps Script (https://script.google.com/u/0/home/projects/1oZgKnxqsioHXGj6jILQQhcJkjZK_xmdxESsNL-3TSOj9LsOHmKzSZcob/edit) is triggered via "On Changed" trigger action. . The script processes the data in the new Google Sheets row and fills out our Google Docs invoice template "PharmacAI Invoice" (https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit). 
 - Invoice Generation: The Google Docs invoice templates placeholers are populated with the data to produce a finished invoice.
 
 ## Scenario 2: Book an Appointment
@@ -185,6 +192,11 @@ This workflow automates the scheduling process, creating an appointment for the 
 - Webhook Trigger: The scenario is initiated by a custom webhook that's set up to listen for a POST request from the chatbot.
 - Google Calendar Action: The details for the event (start date, end date, user name and user email) are mapped from the processed webhook data to the relevant fields in the Google Calendar event creation form.
 - Appointment Booking: The event is then automatically added to our Google Calendar (https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ), effectively booking an appointment. The event can include all the necessary details, such as date, time, participants, and any notes relevant to the appointment.
+
+## Integration with Camunda
+<img width="396" alt="Bildschirmfoto 2023-11-23 um 19 54 43" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/39cca1e1-5da3-4afc-a0e0-d01d608bf6db">
+Upon completion of the chatbot's protocol, a POST request is sent to the Camunda Engine where a process definition is already deployed. The POST request starts a new process instance and all variables from the chatbot are transmitted in the request body for further handling in Camunda. 
+
 ___________
 
 ### Scenario
