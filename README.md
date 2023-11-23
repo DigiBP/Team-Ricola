@@ -11,6 +11,9 @@
 ## Links 🔗
 - API: https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%201-54d9685dbc4145cdbc87804d1ff98b8b? (Version Sarah 11.11.)
 - Chatbot: Voiceflow
+- PharmacAI Accounting: Google Sheets https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0
+- PharmacAI Invoice: Google Docs https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit
+- PharmacAI Google Calendar: https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ
 
 ## Coach
 - Andreas Martin
@@ -151,6 +154,21 @@ The flowchart outlines a structured process for a pharmacy or medical service to
 For unknown drugs, the process involves checking the medication request, verifying patient identity, and then either confirming the drug recommendation or proceeding to prescription if necessary.
 
 Separately, for appointments or teleconsults, a date is requested, and upon finding a suitable slot, it is confirmed. Types of appointments vary from general measurements to vaccinations, COVID testing, general health checks, prescription of birth control pills, ear piercing, or a prescription consultation. Each service pathway concludes with patient data collection, invoicing, and ends the conversation, ensuring a clear and efficient resolution to the customer's needs.
+
+## Make Scenarios
+### Scenario 1: Invoice Generation
+This workflow automates the process of capturing data from the chatbot via a webhook and directly inputting that data into a Google Sheets document, from which an invoice can be generated. 
+- Webhook Trigger: This is the starting point of the workflow. We have set up a custom webhook that waits for a POST request that is sent from the chatbot. When the webhook receives the JSON data, it triggers the automation.
+- Google Sheets Action: The processed data is then sent to the Google Sheets document "PharmacAI Accounting" (https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0). The workflow takes the data from the webhook and adds a new row to the Google Sheets document with the data mapped to the appropriate columns.
+- Google Apps Script Execution: After the data is entered into Google Sheets, a Google Apps Script is triggered via "On Changed" trigger action. . The script processes the data in the new Google Sheets row and fills out our Google Docs invoice template "PharmacAI Invoice" (https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit). 
+- Invoice Generation: The Google Docs invoice templates placeholers are populated with the data to produce a finished invoice.
+
+## Scenario 2: Book an Appointment
+This workflow automates the scheduling process, creating an appointment for the selected time slot from the chatbot in Google Calendar without manual intervention, ensuring a streamlined experience for both the users and the service providers.
+
+- Webhook Trigger: The scenario is initiated by a custom webhook that's set up to listen for a POST request from the chatbot.
+- Google Calendar Action: The details for the event (start date, end date, user name and user email) are mapped from the processed webhook data to the relevant fields in the Google Calendar event creation form.
+- Appointment Booking: The event is then automatically added to our Google Calendar (https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ), effectively booking an appointment. The event can include all the necessary details, such as date, time, participants, and any notes relevant to the appointment.
 ___________
 
 ### Scenario
