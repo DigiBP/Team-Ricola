@@ -50,6 +50,7 @@ When visiting the pharmacy, the pharmaceutical assistant enquires about the pati
 ___________
 
 ### Issues with the current As-Is Proces 🚩
+
 **Waiting times:** Pharmacies can have long waiting times, especially at peak times. This can be inconvenient, especially if you need urgent medication.
 
 **Limited opening hours:** Pharmacies often have limited opening hours, which means patients may have difficulty getting their medication outside of regular business hours or on weekends.
@@ -57,12 +58,6 @@ ___________
 **Personal presence required:** To pick up medication, patients usually have to physically go to the pharmacy. This can be a challenge for people with limited mobility or chronic illnesses.
 
 **Confidentiality and stigma:** Some patients may feel uncomfortable asking for or picking up prescription or sensitive medications at the pharmacy due to privacy concerns or stigma.
-
-**Medication errors:** Although pharmacies strive to avoid medication dispensing errors, occasionally errors in dosing, medication selection or labeling can occur.
-
-**Limited consultation:** In busy pharmacies, the time pharmacists have available for consultation may be limited. This can lead to patients not being adequately informed about the correct use and side effects of their medication.
-
-**Cost:** Prices for medications can vary in different pharmacies and some medications can be expensive, especially if they are not covered by health insurance.
 
 **Language barrier:** Several languages are spoken in Switzerland and this can lead to communication problems, especially if the pharmacist or staff do not speak the patient's native language.
 ___________
@@ -83,10 +78,6 @@ ___________
 
 **Discretion:** The chatbot provides a private and discreet setting for people who prefer to discuss their health issues confidentially. 
 
-**Personalized recommendations:** By analyzing previous orders, the chatbot can make personalized medication recommendations, enhancing customer satisfaction. 
-
-**Information on side effects and interactions:** The chatbot can provide information on medication side effects and drug interactions to ensure customer safety. 
-
 **Scalability:** The chatbot can handle multiple user interactions simultaneously, making it more scalable than relying solely on human staff.
 
 ___________
@@ -103,6 +94,15 @@ The patient is not feeling well and decides to arrange an appointment with the p
 ## Fully automated process
 
 ## Conclusion
+Under the leadership of Andreas Martin and Charuta Panda, we have been working on the development of PharmacAI, an innovative system for optimizing and digitizing the medication procurement process in Switzerland. Our goal was to make the process more user-friendly and efficient for both patients and employees.
+
+The current medication procurement process requires patients to visit pharmacies in person, which is often associated with long waiting times, limited opening hours and challenges in consultation. Additional issues such as confidentiality concerns, cost and language barriers further complicate the process.
+
+To overcome these challenges, we plan to introduce a fully automated system supported by a chatbot. This chatbot will be available 24/7 and will allow patients to order medication quickly, efficiently and discreetly. The main advantages of this system include time savings, constant availability, a simple user interface, quick responses, automated order processing and discretion.
+
+The project envisages two main use cases: Firstly, ordering medication via the chatbot after receiving a prescription and secondly, arranging an appointment or teleconsultation via the chatbot. These innovations aim to revolutionize the medication procurement process in Switzerland by improving efficiency, accessibility and user experience.
+
+In the future, it would be exciting to integrate personalized medication recommendations and detailed information about side effects and drug interactions. These innovations will not only increase patient safety, but also significantly improve the efficiency of the system.
 
 ![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/89074b44-a79e-43e7-828e-0cb6210f4f96)
 
