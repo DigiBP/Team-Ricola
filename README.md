@@ -195,6 +195,7 @@ This workflow automates the scheduling process, creating an appointment for the 
 
 ## Integration with Camunda
 <img width="396" alt="Bildschirmfoto 2023-11-23 um 19 54 43" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/39cca1e1-5da3-4afc-a0e0-d01d608bf6db">
+
 Upon completion of the chatbot's protocol, a POST request is sent to the Camunda Engine where a process definition is already deployed. The POST request starts a new process instance and all variables from the chatbot are transmitted in the request body for further handling in Camunda. 
 
 ___________
@@ -203,10 +204,11 @@ ___________
 Scenario 1: Ordering medication 💊
 
 The patient goes to the doctor and receives a prescription for his medication. On the way home, the patient can order the medication by communicating with our chatbot. The pharmacy checks whether it has the medication in stock and checks it using the dual control principle, then packs it and delivers it to the patient accordingly. 
+If the patient is not sure which medication he would like to get, he can consult with the chatbot, who makes suggestions for the patient's symptoms based on the information in its knowledge base. If the patient wishes to order the suggested medication, he can do so directly via bot. 
 
 Scenario 2: Booking an appointment/ teleconsult 👩🏻‍⚕️👨🏽‍⚕️
 
-The patient is not feeling well and decides to arrange an appointment with the pharmacy via the chatbot. To do this, he opens the chatbot and enters his available day and selects the appropriate time. When a suitable appointment is found, the patient can choose between a face-to-face or virtual appointment (teleconsult). The appointment is confirmed by sending an email to the pharmacy and patient.
+When a patient decides to arrange an appointment with the pharmacy via the chatbot, he opens the chatbot and enters his preferred day and selects the appropriate time. When a suitable appointment is found, the patient can choose between a face-to-face or virtual appointment (teleconsult). Furthermore, the patient can select the type of appointment he wishes to conduct (taking measurements, vaccination consult, corona testing, mediCheck for drug interactions, birth control pill consult, piercing of the ears or prescription consult). The appointment is confirmed by sending an email to the pharmacy and patient, as well as making an appoinment in the Google Calendar of both PharmacAI and the customer. In case of teleconsult, this appointment includes a link to Google Meet, where the teleconsult will be held.
 
 ## Fully automated process
 
@@ -215,9 +217,9 @@ Under the leadership of Andreas Martin and Charuta Panda, we have been working o
 
 The current medication procurement process requires patients to visit pharmacies in person, which is often associated with long waiting times, limited opening hours and challenges in consultation. Additional issues such as confidentiality concerns, cost and language barriers further complicate the process.
 
-To overcome these challenges, we plan to introduce a fully automated system supported by a chatbot. This chatbot will be available 24/7 and will allow patients to order medication quickly, efficiently and discreetly. The main advantages of this system include time savings, constant availability, a simple user interface, quick responses, automated order processing and discretion.
+To overcome these challenges, we plan introduced a fully automated system supported by a chatbot. This chatbot is available 24/7 and allows patients to order medication quickly, efficiently and discreetly. The main advantages of this system include time savings, constant availability, a simple user interface, quick responses, automated order processing and discretion.
 
-The project envisages two main use cases: Firstly, ordering medication via the chatbot after receiving a prescription and secondly, arranging an appointment or teleconsultation via the chatbot. These innovations aim to revolutionize the medication procurement process in Switzerland by improving efficiency, accessibility and user experience.
+The project envisages two main use cases: Firstly, ordering medication via the chatbot (either after consultation which medication to get from the chatbot or after having received a prescription from a doctor) and secondly, arranging an appointment or teleconsultation via chatbot. These innovations aim to revolutionize the medication procurement process in Switzerland by improving efficiency, accessibility and user experience.
 
 In the future, it would be exciting to integrate personalized medication recommendations and detailed information about side effects and drug interactions. These innovations will not only increase patient safety, but also significantly improve the efficiency of the system.
 
