@@ -33,6 +33,7 @@ Our aim in this project is to optimize and digitalize the process of obtaining m
 - Make
 - Google Calender
 - Google Forms
+- Google Apps Script
 - Flask
 
 ## Current As-Is Process
@@ -146,6 +147,9 @@ ___________
 
 **Scalability:** The chatbot can handle multiple user interactions simultaneously, making it more scalable than relying solely on human staff.
 
+___________
+
+
 ## Chatbot
 
 <img width="1550" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/5099805b-4972-4559-a6ec-00e350b73b9d">
@@ -156,7 +160,22 @@ For unknown drugs, the process involves checking the medication request, verifyi
 
 Separately, for appointments or teleconsults, a date is requested, and upon finding a suitable slot, it is confirmed. Types of appointments vary from general measurements to vaccinations, COVID testing, general health checks, prescription of birth control pills, ear piercing, or a prescription consultation. Each service pathway concludes with patient data collection, invoicing, and ends the conversation, ensuring a clear and efficient resolution to the customer's needs.
 
-### Booking an Appointment through the Chatbot
+
+
+
+
+### Knowledge Base
+<img src="https://github.com/DigiBP/Team-Ricola/assets/60508037/36abee9b-4171-4201-b583-a7bf12359bf3" alt="alt text" width="30%">
+<img src="https://github.com/DigiBP/Team-Ricola/assets/60508037/31c145f3-5de9-4aca-81e8-633e62dadc78" alt="alt text" width="29%">
+
+
+#### Objective:
+The knowledge base serves as a foundational resource for the chatbot and includes data on common symptoms, associated therapies, and details regarding the prescription status and pricing of medications. This base is structured to facilitate the efficient retrieval and dissemination of information, supporting the chatbot in delivering accurate and relevant responses to user inquiries.
+
+
+
+
+### Booking an Appointment through the Chatbot 👩🏻‍⚕️👨🏽‍⚕️
 <img width="965" alt="Bildschirmfoto 2023-11-23 um 18 35 30" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/da76a44c-5e20-4f8d-966a-1cfea2e33845">
 
 #### Objective:
@@ -170,32 +189,69 @@ To document the automated appointment scheduling system for pharmacAI, detailing
 4. Appointment Objective Inquiry: The customer has a choice between the most common pharmacy inquiries (e.g. vaccination recommendations).
 5. Customer Information Collection: The personal information for the booking of the appointment is gathered, which is necessary for the invoice generation.
 6. Data Submission and Event Creation: This gathered data is sent to Make via a POST request, from where on the setting of an appointment is triggered (see also: Make Scenario 1).
-7. Workflow Management with Camunda: Simultaneously, a POST request is sent to Camunda to initiate the appointment management workflow.
+7. Workflow Management with Camunda: The Voiceflow component POST to Camunda is called.
 Camunda handles the necessary steps to ensure the appointment is held successfully (User Task: Hold Appointment) and triggers the invoice generation (Service Task: Prepare Invoice) after the appointment.
 
-<img width="392" alt="Bildschirmfoto 2023-11-23 um 19 52 37" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/76df3d0a-34d8-4ba8-af2e-9482cb7622d7">
-<img width="396" alt="Bildschirmfoto 2023-11-23 um 19 52 21" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/acb2b35c-eb8b-4e79-9383-870c0959f61b">
 
-POST Request to the Google Free Busy API
+
+### Ordering Medication via Chatbot 💊
+![Bildschirmfoto 2023-12-03 um 11 31 59](https://github.com/DigiBP/Team-Ricola/assets/60508037/89d80475-ba46-4cac-befd-c64bcd47b44e)
+
+
+#### Objective:
+To assist the customer in ordering medication and submit the order to Camunda for processing.
+
+#### Process Flow:
+
+1. Patient-Chatbot Interaction: The patient starts the conversation with the chatbot by requesting to order medication.
+2. Medication Known: The customer is asked whether he knows, which medication he wishes to order.
+3. Knowledge Base: If the user does not yet have a specific medication in mind, he is queried for his symptoms and the chatbot will suggest a medication for his symptoms.
+4. Medication Confirmation: The user is asked to confirm the medication he wants to order.
+5. Medication Price: The bot checks the price for the selected medication in its knowledge base and saves it in the variable price, which is later transmitted to Camunda and from there to Make for invoice processing.
+6. Prescription Status: If the medication needs a prescription (which is determined in the knowledge base of the chatbot), the user is prompted to upload both the prescription and some form of identification (ID, passport or driver's licence).
+7.  Workflow Management with Camunda: The Voiceflow component POST to Camunda is called.
+   
+
+![Bildschirmfoto 2023-12-03 um 11 38 20](https://github.com/DigiBP/Team-Ricola/assets/60508037/2dfef1b1-69d9-4620-b892-641314be7b3f)
+File Upload System for Prescription Medication
+
+___________
+
+## Integration with Camunda
+
+### Voiceflow Component "POST to Camunda"
+
+<img src="https://github.com/DigiBP/Team-Ricola/assets/60508037/997f5d8c-53ca-4d4b-b797-08d4f50051ee" alt="alt text" width="50%">
+
+#### Objective:
+This Voiceflow component serves as the end-point for all pathways in the chatbot, gathers the customer's billing information sends all the gathered variables in a POST request to the Camunda API. By implementing it as a component, reusability of this subprocess was granted.
+
+#### Process Flow:
+
+1. Billing Information: The customer's full name, address and e-mail are collected and saved in variables.
+2. Current Date: The current date is saved in a variable so the billing date and due date can later be calculated correctly.
+3. POST Request to Camunda: A POST request is made to the URL "https://digibp.herokuapp.com/engine-rest/process-definition/key/Process_0g7objr/tenant-id/MI18/submit-form", which starts a new process instance of the deployed BPMN model. All the necessary variables for the process are included in the body of the request. 
+   
+### Process Instance in Camunda
+<img src="https://github.com/DigiBP/Team-Ricola/assets/60508037/c2c12ffa-d526-4892-84f4-f12bb8312472" alt="alt text" width="50%">
+
+Once the process instance is started via POST request, it is displayed in the Camunda Engine with all the variables that were gathered in the conversation of the chatbot.
+From here, the To-Be-Process is run. 
 
 ## Make Scenarios
-### Scenario 1: Invoice Generation
+### Make Scenario 1: Invoice Generation
 This workflow automates the process of capturing data from the chatbot via a webhook and directly inputting that data into a Google Sheets document, from which an invoice can be generated. 
 - Webhook Trigger: This is the starting point of the workflow. We have set up a custom webhook that waits for a POST request that is sent from the chatbot. When the webhook receives the JSON data, it triggers the automation.
 - Google Sheets Action: The processed data is then sent to the Google Sheets document "PharmacAI Accounting" (https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0). The workflow takes the data from the webhook and adds a new row to the Google Sheets document with the data mapped to the appropriate columns.
 - Google Apps Script Execution: After the data is entered into Google Sheets, a Google Apps Script (https://script.google.com/u/0/home/projects/1oZgKnxqsioHXGj6jILQQhcJkjZK_xmdxESsNL-3TSOj9LsOHmKzSZcob/edit) is triggered via "On Changed" trigger action. . The script processes the data in the new Google Sheets row and fills out our Google Docs invoice template "PharmacAI Invoice" (https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit). 
 - Invoice Generation: The Google Docs invoice templates placeholers are populated with the data to produce a finished invoice.
 
-## Scenario 2: Book an Appointment
+## Make Scenario 2: Book an Appointment
 This workflow automates the scheduling process, creating an appointment for the selected time slot from the chatbot in Google Calendar without manual intervention, ensuring a streamlined experience for both the users and the service providers.
 
 - Webhook Trigger: The scenario is initiated by a custom webhook that's set up to listen for a POST request from the chatbot.
 - Google Calendar Action: The details for the event (start date, end date, user name and user email) are mapped from the processed webhook data to the relevant fields in the Google Calendar event creation form.
 - Appointment Booking: The event is then automatically added to our Google Calendar (https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ), effectively booking an appointment. The event can include all the necessary details, such as date, time, participants, and any notes relevant to the appointment.
-
-## Integration with Camunda
-<img width="396" alt="Bildschirmfoto 2023-11-23 um 19 54 43" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/39cca1e1-5da3-4afc-a0e0-d01d608bf6db">
-Upon completion of the chatbot's protocol, a POST request is sent to the Camunda Engine where a process definition is already deployed. The POST request starts a new process instance and all variables from the chatbot are transmitted in the request body for further handling in Camunda. 
 
 ___________
 
