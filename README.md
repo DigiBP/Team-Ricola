@@ -256,17 +256,24 @@ This workflow automates the scheduling process, creating an appointment for the 
 
 ___________
 
-### Scenario
-Scenario 1: Ordering medication 💊
+## Customer Scenarios
+Scenario 1: Ordering prescription medication 💊
 
-The patient goes to the doctor and receives a prescription for his medication. On the way home, the patient can order the medication by communicating with our chatbot. The pharmacy checks whether it has the medication in stock and checks it using the dual control principle, then packs it and delivers it to the patient accordingly. 
-If the patient is not sure which medication he would like to get, he can consult with the chatbot, who makes suggestions for the patient's symptoms based on the information in its knowledge base. If the patient wishes to order the suggested medication, he can do so directly via bot. 
+The patient goes to the doctor and receives a prescription for his medication. On the way home, the patient can order the medication by communicating with our chatbot. The user has to upload his prescription and identification. The pharmacy then checks whether it has the medication in stock, deducts the medication package from the stock and checks it using the dual control principle, then packs it and delivers it to the patient accordingly. 
+Video Link: [Prescription Medication Order](https://drive.google.com/file/d/1DLCgkwElCej7nbeA2HfAzzDQ3rzXbGkL/view?usp=drive_link)
 
-Scenario 2: Booking an appointment/ teleconsult 👩🏻‍⚕️👨🏽‍⚕️
+Scenario 2: Medication Consult & Order 
+
+The patient has fallen ill and wishes to order medication, but does not know which medication to get. The chatbot asks for the user's symptoms and checks for a fitting medication in his knowledge base and suggests it (only Over-The-Counter medication, as the customer would not have a prescription in this case). The patient can then confirm the medication or ask for another recommendation. Upon confirmation, a medication order can be placed directly via bot.
+Video Link: [Medication Consult](https://drive.google.com/file/d/1jGsJAijKZFvoeLmTRvMVCVM9rXVAoX7L/view)
+
+Scenario 3: Booking an appointment/ teleconsult 👩🏻‍⚕️👨🏽‍⚕️
 
 When a patient decides to arrange an appointment with the pharmacy via the chatbot, he opens the chatbot and enters his preferred day and selects the appropriate time. When a suitable appointment is found, the patient can choose between a face-to-face or virtual appointment (teleconsult). Furthermore, the patient can select the type of appointment he wishes to conduct (taking measurements, vaccination consult, corona testing, mediCheck for drug interactions, birth control pill consult, piercing of the ears or prescription consult). The appointment is confirmed by sending an email to the pharmacy and patient, as well as making an appoinment in the Google Calendar of both PharmacAI and the customer. In case of teleconsult, this appointment includes a link to Google Meet, where the teleconsult will be held.
+Video Link: [Appointment Booking](https://drive.google.com/file/d/1Qu6Tp09XltZ7QVgK8HluyKGdLfSfDgy7/view?usp=sharing)
 
-## Fully automated process
+___________
+
 
 ## Conclusion
 Under the leadership of Andreas Martin and Charuta Panda, we have been working on the development of PharmacAI, an innovative system for optimizing and digitizing the medication procurement process in Switzerland. Our goal was to make the process more user-friendly and efficient for both patients and employees.
