@@ -1,4 +1,5 @@
 # Team-Ricola - *PharmacAI* 
+
 ## Team Members 👩🏽‍⚕️👩🏻‍⚕️👩🏻‍⚕️👨🏽‍⚕️
 
 | Names  | Emails |
@@ -162,8 +163,6 @@ Separately, for appointments or teleconsults, a date is requested, and upon find
 
 
 
-
-
 ### Knowledge Base
 <img src="https://github.com/DigiBP/Team-Ricola/assets/60508037/36abee9b-4171-4201-b583-a7bf12359bf3" alt="alt text" width="30%">
 <img src="https://github.com/DigiBP/Team-Ricola/assets/60508037/31c145f3-5de9-4aca-81e8-633e62dadc78" alt="alt text" width="29%">
@@ -237,6 +236,9 @@ This Voiceflow component serves as the end-point for all pathways in the chatbot
 
 Once the process instance is started via POST request, it is displayed in the Camunda Engine with all the variables that were gathered in the conversation of the chatbot.
 From here, the To-Be-Process is run. 
+
+
+___________
 
 ## Make Scenarios
 ### Make Scenario 1: Invoice Generation
