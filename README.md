@@ -1,4 +1,4 @@
-# Team-Ricola - *PharmacAI* 
+![digital_pharmacy_to_be](https://github.com/DigiBP/Team-Ricola/assets/60508037/319ef73e-11da-4c5c-a616-5dc55d4e2f6f)# Team-Ricola - *PharmacAI* 
 
 ## Team Members 👩🏽‍⚕️👩🏻‍⚕️👩🏻‍⚕️👨🏽‍⚕️
 
@@ -100,7 +100,8 @@ ___________
 ___________
 
 ## To-Be Process
-![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/fddf1507-f256-41c8-b833-5b499452067a)
+![image](https://github.com/DigiBP/Team-Ricola/assets/60508037/b4def884-78d9-4730-81ec-65cd05a7f76a)
+
 
 1. **Service Start:**
 - The process begins when the customer interacts with the chatbot.
