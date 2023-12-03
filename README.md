@@ -1,4 +1,4 @@
-![digital_pharmacy_to_be](https://github.com/DigiBP/Team-Ricola/assets/60508037/319ef73e-11da-4c5c-a616-5dc55d4e2f6f)# Team-Ricola - *PharmacAI* 
+# Team-Ricola - *PharmacAI* 
 
 ## Team Members 👩🏽‍⚕️👩🏻‍⚕️👩🏻‍⚕️👨🏽‍⚕️
 
