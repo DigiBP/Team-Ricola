@@ -230,7 +230,7 @@ This Voiceflow component serves as the end-point for all pathways in the chatbot
 
 1. Billing Information: The customer's full name, address and e-mail are collected and saved in variables.
 2. Current Date: The current date is saved in a variable so the billing date and due date can later be calculated correctly.
-3. POST Request to Camunda: A POST request is made to the URL "https://digibp.herokuapp.com/engine-rest/process-definition/key/Process_0g7objr/tenant-id/MI18/submit-form", which starts a new process instance of the deployed BPMN model. All the necessary variables for the process are included in the body of the request. 
+3. POST Request to Camunda: A POST request is made to the URL "https://digibp.herokuapp.com/engine-rest/process-definition/key/Process_0g7objr/tenant-id/MI18/submit-form", which starts a new process instance of the already deployed process definition. All the necessary variables for the process are included in the body of the request. 
    
 ### Process Instance in Camunda
 <img src="https://github.com/DigiBP/Team-Ricola/assets/60508037/c2c12ffa-d526-4892-84f4-f12bb8312472" alt="alt text" width="50%">
@@ -253,10 +253,6 @@ This workflow automates the scheduling process, creating an appointment for the 
 - Google Calendar Action: The details for the event (start date, end date, user name and user email) are mapped from the processed webhook data to the relevant fields in the Google Calendar event creation form.
 - Appointment Booking: The event is then automatically added to our Google Calendar (https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ), effectively booking an appointment. The event can include all the necessary details, such as date, time, participants, and any notes relevant to the appointment.
 
-## Integration with Camunda
-<img width="396" alt="Bildschirmfoto 2023-11-23 um 19 54 43" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/39cca1e1-5da3-4afc-a0e0-d01d608bf6db">
-
-Upon completion of the chatbot's protocol, a POST request is sent to the Camunda Engine where a process definition is already deployed. The POST request starts a new process instance and all variables from the chatbot are transmitted in the request body for further handling in Camunda. 
 
 ___________
 
