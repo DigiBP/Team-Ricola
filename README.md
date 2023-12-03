@@ -38,7 +38,8 @@ Our aim in this project is to optimize and digitalize the process of obtaining m
 - Flask
 
 ## Current As-Is Process
-<img width="1544" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/185a93d7-7b26-4224-b5c5-886421aaabe1">
+<img width="1544" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/eefdff95-c0d4-43d2-ad28-63252eec582d">
+
 
 1. **Customer Arrival:** The customer arrives at the pharmacy.
 
