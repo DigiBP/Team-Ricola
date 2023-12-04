@@ -1,4 +1,17 @@
 # Team-Ricola - *PharmacAI* 
+- [Team Members](#team-members-👩🏽‍⚕️👩🏻‍⚕️👩🏻‍⚕️👨🏽‍⚕️) 
+- [Links](#links-🔗) 
+- [Coaching](#coaching) 
+- [Introduction](#introduction) 
+- [Technologies](#Technologies) 
+- [As-Is Process](#as-is-process) 
+- [To-Be Process](#to-be-process) 
+- [Chatbot](#chatbot) 
+- [Integration with Camunda](#integration-with-camunda) 
+- [Make Scenarios](#make-scenarios) 
+- [Customer Scenarios](#customer-scenarios) 
+- [Medication Stock REST API](#medication-stock-rest-api) 
+- [Conclusion](#conclusion)
 
 ## Team Members 👩🏽‍⚕️👩🏻‍⚕️👩🏻‍⚕️👨🏽‍⚕️
 
@@ -10,6 +23,7 @@
 | Shathvika Karunakaran  | shathvikashima.karunakaran@students.fhnw.ch  |
 
 ## Links 🔗
+- [Camunda](https://digibp.herokuapp.com/)
 - [Medication Stock API](https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%202-73dce108c691468dbef96242504c074b?)
 - [Chatbot: Voiceflow](https://digibp.github.io/Team-Ricola/)
 - [PharmacAI Accounting: Google Sheets](https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0)
@@ -17,27 +31,17 @@
 - [PharmacAI Google Calendar](https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ)
 - [PharmacAI Apps Script](https://script.google.com/u/0/home/projects/1oZgKnxqsioHXGj6jILQQhcJkjZK_xmdxESsNL-3TSOj9LsOHmKzSZcob/edit)
 
-## Coach
+## Coaching
 - Andreas Martin
-- Charuta Panda
+- Charuta Pande
 
 ## Introduction
 The drug and pharmacy system in Switzerland is similar to those in other countries, but with some differences. Medicinal products that promise to cure specific ailments can only be purchased in pharmacies or rarely in "Drogerien". The drugs are categorized based on whether they require a prescription or are available over-the-counter (OTC). Commonly used drugs for minor ailments such as headaches and coughs can be purchased without a prescription. However, prescription from a medical doctor is required for drugs like antibiotics, pain relievers with high dosage, and drugs used in treating cancer.
 
-## Goal 🎯
+### Goal 🎯
 Our aim in this project is to optimize and digitalize the process of obtaining medication. The tool should be user-friendly for patients and employees.
 
-## Implementation
-- Camunda
-- Voiceflow
-- Voiceglow
-- Make
-- Google Calender
-- Google Forms
-- Google Apps Script
-- Flask
-
-## Current As-Is Process
+## As-Is Process
 <img width="1544" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/eefdff95-c0d4-43d2-ad28-63252eec582d">
 
 
@@ -87,7 +91,7 @@ Our aim in this project is to optimize and digitalize the process of obtaining m
 
 ___________
 
-### Issues with the current As-Is Proces 🚩
+### Issues with the As-Is Proces 🚩
 
 **Waiting times:** Pharmacies can have long waiting times, especially at peak times. This can be inconvenient, especially if you need urgent medication.
 
@@ -107,34 +111,37 @@ ___________
 1. **Service Start:**
 - The process begins when the customer interacts with the chatbot.
 
-3. **Determining Service Type:**
+2. **Determining Service Type:**
 - The chatbot determines whether the customer needs medication or an appointment.
 
-4. **Consulting a Prescription:**
+3. **Consulting a Prescription:**
 - If medication is required, the chatbot assesses whether a prescription is necessary.
 - If a prescription is needed, the chatbot proceeds to check the prescription.
 
-5. **Prescription Checking and Drug Preparation:**
+4. **Prescription Checking and Drug Preparation:**
 - Upon confirmation of the prescription, the system prepares the drugs.
 - If the prescription is not required, the system directly prepares the drugs.
 
-6. **Inventory Management:**
+5. **Inventory Management:**
 - The system checks if the medication is in stock.
 - If the stock is sufficient, the order continues.
 - If the stock is insufficient, the system triggers a reorder flow, which includes reordering low stock, restocking, and updating the inventory.
 
-7. **Appointment Handling:**
+6. **Appointment Handling:**
 - If an appointment is needed, the chatbot helps to book the appointment.
 
-8. **Order Verification and Packaging:**
+7. **Order Verification and Packaging:**
 - The system verifies the order.
 - If the order is correct, the package is prepared for shipping.
 
-9. **Invoice Preparation:**
+8. **Invoice Preparation:**
 - The system prepares an invoice for the customer.
 
-10. **Order Completion:**
+9. **Order Completion:**
 - The order is finalized, and the process concludes with the customer being notified that their order has been processed.
+
+10. **Automatic Storage System:**
+- This API facilitates monitoring low stock items, deducting sold medications, and restocking items in the pharmacy inventory through specific endpoints.
 
 ### Benefits ✔️
 
@@ -150,12 +157,22 @@ ___________
 
 **Scalability:** The chatbot can handle multiple user interactions simultaneously, making it more scalable than relying solely on human staff.
 
-___________
+**Automatic reordering:** The API makes the reordering process automatic, can save time and give structure to this process.
+
+## Technologies
+- Camunda
+- Voiceflow
+- Voiceglow
+- Make
+- Google Calender
+- Google Forms
+- Google Apps Script
+- Flask
 
 
 ## Chatbot
 
-<img width="1072" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/d5379659-1906-410e-b45e-491feb97d157">
+<img width="1550" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/5099805b-4972-4559-a6ec-00e350b73b9d">
 
 The flowchart outlines a structured process for a pharmacy or medical service to handle customer needs. It starts by assessing whether the customer knows the drug they need. If they do, the service can directly order the medication, or set up an appointment or teleconsult. In cases where over-the-counter medication is sufficient, patient data is collected, verified, and an invoice is sent, concluding the interaction. For prescription medications, symptoms are discussed, a drug is recommended, and upon confirmation, either an over-the-counter drug is provided or a prescription is requested, followed by data collection and invoicing.
 
@@ -250,7 +267,7 @@ This workflow automates the process of capturing data from the chatbot via a web
 - Google Apps Script Execution: After the data is entered into Google Sheets, a [Google Apps Script](https://script.google.com/u/0/home/projects/1oZgKnxqsioHXGj6jILQQhcJkjZK_xmdxESsNL-3TSOj9LsOHmKzSZcob/edit) is triggered via "On Changed" trigger action. . The script processes the data in the new Google Sheets row and fills out our Google Docs invoice template [PharmacAI Invoice](https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit). 
 - Invoice Generation: The Google Docs invoice templates placeholers are populated with the data to produce a finished invoice.
 
-## Make Scenario 2: Book an Appointment
+### Make Scenario 2: Book an Appointment
 This workflow automates the scheduling process, creating an appointment for the selected time slot from the chatbot in Google Calendar without manual intervention, ensuring a streamlined experience for both the users and the service providers.
 
 - Webhook Trigger: The scenario is initiated by a custom webhook that's set up to listen for a POST request from the chatbot.
@@ -277,16 +294,70 @@ When a patient decides to arrange an appointment with the pharmacy via the chatb
 Video Link: [Appointment Booking](https://drive.google.com/file/d/1Qu6Tp09XltZ7QVgK8HluyKGdLfSfDgy7/view?usp=sharing)
 
 ___________
+## Medication Stock REST API
+This API facilitates monitoring low stock items, deducting sold medications, and restocking items in the pharmacy inventory through specific endpoints. The database operates on a simple CSV structure. Notably, changes made within the API aren't directly written to the CSV. Instead, for showcasing purposes, the stock resets upon API restarts. While in an optimal scenario, changes should reflect in the CSV, this method serves demonstration needs effectively.
 
+When the API detects a low stock item, it initiates a reorder process. This action prompts the creation of a manual task in Camunda. Upon the arrival of the medication, personnel can restock the shelves and fill out a form in Camunda, specifying the restocked quantity. The submission of this form updates the running database without directly modifying the CSV file.
+
+#### Routes:
+
+##### 1. Order Low Stock Medication
+
+-   **Route:** `/stock/order` (GET)
+-   **Purpose:** Retrieves items low on stock and not yet ordered.
+-   **Action:**
+    -   Finds items with stock levels below a threshold (`stock_low_threshold`) and not marked as ordered.
+    -   Marks these items as ordered (`'ordered'` column in CSV).
+-   **Response:**
+    -   If no items need reordering, it returns `{"reorder_started": False}`.
+    -   If items are reordered, it returns `{"reorder_started": True}`.
+
+##### 2. Deduct Medication Amount
+
+-   **Route:** `/stock/<name>/deduct` (POST)
+-   **Purpose:** Deducts sold medication amount from the stock.
+-   **Action:**
+    -   Takes the medication name from the URL and deducts the specified amount from the stock if available.
+    -   If the medication doesn’t exist or the requested amount exceeds stock, it provides appropriate responses.
+-   **Example Payload:**
+	- ```{ "amount": 5 }```
+	- This payload deducts 5 units of the specified medication.
+-   **Response:**
+    -   `"Success"` (with status code 200) if the deduction is successful.
+    -   `"Not enough left"` if the requested amount exceeds available stock.
+    -   `"Medication not tracked"` if the medication isn't in the system.
+
+##### 3. Restock Medication
+
+-   **Route:** `/stock/restock` (POST)
+-   **Purpose:** Restocks medication in the inventory.
+-   **Action:**
+    -   Accepts a JSON payload containing medication names and their restock amounts.
+    -   Increases the stock levels for specified medications and marks them as not ordered.
+-   **Example Payload:**
+	- ```{ "Aspirin": 10, "Ibuprofen": 20 }```
+	- This payload indicates restocking 10 units of Aspirin and 20 units of Ibuprofen. Adjust the medication names and quantities as needed.
+-   **Response:** `"Success"` (with status code 200) after successful restocking.
+
+#### CSV Database Structure:
+
+-   **Fields:** `id`, `name`, `stock`, `prescription_needed`, `ordered`.
+-   `id`: Unique identifier for each medication.
+-   `name`: Name of the medication.
+-   `stock`: Current stock level.
+-   `prescription_needed`: Indicates if a prescription is required.
+-   `ordered`: Boolean indicating whether the medication has been ordered.
+
+___________
 
 ## Conclusion
-Under the leadership of Andreas Martin and Charuta Panda, we have been working on the development of PharmacAI, an innovative system for optimizing and digitizing the medication procurement process in Switzerland. Our goal was to make the process more user-friendly and efficient for both patients and employees.
+Under the leadership of Andreas Martin and Charuta Pande, we have been working on the development of PharmacAI, an innovative system for optimizing and digitizing the medication procurement process in Switzerland. Our goal was to make the process more user-friendly and efficient for both patients and employees.
 
 The current medication procurement process requires patients to visit pharmacies in person, which is often associated with long waiting times, limited opening hours and challenges in consultation. Additional issues such as confidentiality concerns, cost and language barriers further complicate the process.
 
-To overcome these challenges, we plan introduced a fully automated system supported by a chatbot. This chatbot is available 24/7 and allows patients to order medication quickly, efficiently and discreetly. The main advantages of this system include time savings, constant availability, a simple user interface, quick responses, automated order processing and discretion.
+To overcome these challenges, we introduced a fully automated system supported by a chatbot. This chatbot is available 24/7 and allows patients to order medication quickly, efficiently and discreetly. The main advantages of this system include time savings, constant availability, a simple user interface, quick responses, automated order processing and discretion.
 
-The project envisages two main use cases: Firstly, ordering medication via the chatbot (either after consultation which medication to get from the chatbot or after having received a prescription from a doctor) and secondly, arranging an appointment or teleconsultation via chatbot. These innovations aim to revolutionize the medication procurement process in Switzerland by improving efficiency, accessibility and user experience.
+The project envisages two main use cases: Firstly, ordering medication via the chatbot (either after consultation which medication to get from the chatbot or after having received a prescription from a doctor) and secondly, arranging an appointment or teleconsultation via chatbot. These innovations aim to revolutionize the medication procurement process in Switzerland by improving efficiency, accessibility and user experience. The Workflow also automatically checks for items low on stock and reorders them if necessary to further make the pharmacists life easier. 
 
 In the future, it would be exciting to integrate personalized medication recommendations and detailed information about side effects and drug interactions. These innovations will not only increase patient safety, but also significantly improve the efficiency of the system.
 
