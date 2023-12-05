@@ -1,6 +1,7 @@
+
 # Team-Ricola - *PharmacAI* 
 - [Team Members](#team-members-👩🏽‍⚕️👩🏻‍⚕️👩🏻‍⚕️👨🏽‍⚕️) 
-- [Links](#links-🔗) 
+- [How to run](#how-to-run) 
 - [Coaching](#coaching) 
 - [Introduction](#introduction) 
 - [Technologies](#Technologies) 
@@ -22,7 +23,20 @@
 | Sarah Meyer  | sarah.meyer@students.fhnw.ch  |
 | Shathvika Karunakaran  | shathvikashima.karunakaran@students.fhnw.ch  |
 
-## Links 🔗
+## How to run
+1. Start [Medication Stock API Notebook 'Medication API'](https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%202-73dce108c691468dbef96242504c074b?) (! Watch out, it sometimes stopps on its own!).
+2. Open [Chatbot: Voiceflow](https://digibp.github.io/Team-Ricola/).
+3. Depending on your interaction with the Chatbot user tasks are created in [Camunda](https://digibp.herokuapp.com/). (Username: sarahmeyer, Password: password)
+
+Google Account:
+E-Mail: pharmacairicola@gmail.com
+Password: PharmacAI_01
+
+*Find all invoices in Google Drive.*
+
+*The first medication order starts the reordering process because Amoxicillin is low on stock.*
+
+### Links 🔗
 - [Camunda](https://digibp.herokuapp.com/)
 - [Medication Stock API](https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%202-73dce108c691468dbef96242504c074b?)
 - [Chatbot: Voiceflow](https://digibp.github.io/Team-Ricola/)
