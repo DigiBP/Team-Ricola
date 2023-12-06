@@ -27,6 +27,7 @@
 1. Start [Medication Stock API Notebook 'Medication API'](https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%202-73dce108c691468dbef96242504c074b?) (! Watch out, it sometimes stopps on its own!).
 2. Open [Chatbot: Voiceflow](https://digibp.github.io/Team-Ricola/).
 3. Depending on your interaction with the Chatbot user tasks are created in [Camunda](https://digibp.herokuapp.com/). (Username: sarahmeyer, Password: password)
+4. Check the PharmacAI Google Docs, where the Invoice information is written in a [Google Sheets](https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0) and an [Invoice](https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit) is automatically generated.
 
 Google Account:
 E-Mail: pharmacairicola@gmail.com
@@ -44,6 +45,11 @@ Password: PharmacAI_01
 - [PharmacAI Invoice: Google Docs](https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit)
 - [PharmacAI Google Calendar](https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ)
 - [PharmacAI Apps Script](https://script.google.com/u/0/home/projects/1oZgKnxqsioHXGj6jILQQhcJkjZK_xmdxESsNL-3TSOj9LsOHmKzSZcob/edit)
+
+## Login - Information
+- Make: E-mail sarah.meyer@students.fhnw.ch, Password PharmacAI_01
+- Google Account: E-Mail pharmacairicola@gmail.com, Password PharmacAI_01
+- Camunda: Username sarahmeyer, Password password
 
 ## Coaching
 - Andreas Martin
@@ -379,3 +385,8 @@ In the future, it would be exciting to integrate personalized medication recomme
 
 ![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/89074b44-a79e-43e7-828e-0cb6210f4f96)
 
+
+On a less serious note: 
+![Bildschirmfoto 2023-12-06 um 19 56 25](https://github.com/DigiBP/Team-Ricola/assets/60508037/f0aa8c1c-4872-481c-b3ed-db9e2c4e0172)
+![Bildschirmfoto 2023-12-06 um 19 58 05](https://github.com/DigiBP/Team-Ricola/assets/60508037/fe8332f8-87f6-4735-987e-c3f398833ac6)
+A visual representation of the immense number of tokens utilized in creating our chatbot, symbolizing the extensive effort and dedication invested in its development.
