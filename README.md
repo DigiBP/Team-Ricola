@@ -386,7 +386,9 @@ In the future, it would be exciting to integrate personalized medication recomme
 ![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/89074b44-a79e-43e7-828e-0cb6210f4f96)
 
 ## On a less serious note: 
+
 <img width="50%" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/f0aa8c1c-4872-481c-b3ed-db9e2c4e0172">
+
 ![Bildschirmfoto 2023-12-06 um 19 58 05](https://github.com/DigiBP/Team-Ricola/assets/60508037/fe8332f8-87f6-4735-987e-c3f398833ac6)
 
 A visual representation of the immense number of tokens utilized in creating our chatbot, symbolizing the extensive effort and dedication invested in its development.
