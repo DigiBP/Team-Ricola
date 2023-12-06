@@ -385,7 +385,7 @@ In the future, it would be exciting to integrate personalized medication recomme
 
 ![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/89074b44-a79e-43e7-828e-0cb6210f4f96)
 
-## On a less serious note: 
+## On a less serious note: 
 
 <img width="50%" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/f0aa8c1c-4872-481c-b3ed-db9e2c4e0172">
 
