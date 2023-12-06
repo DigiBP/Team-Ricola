@@ -24,8 +24,8 @@
 | Shathvika Karunakaran  | shathvikashima.karunakaran@students.fhnw.ch  |
 
 ## Login - Information
-- Make: E-mail sarah.meyer@students.fhnw.ch, Password PharmacAI_01
-- Google Account: E-Mail pharmacairicola@gmail.com, Password PharmacAI_01
+- Make: E-mail sarah.meyer@students.fhnw.ch, Password: PharmacAI_01
+- Google Account: E-Mail pharmacairicola@gmail.com, Password: PharmacAI_01
 - Camunda: Username sarahmeyer, Password password
 
   
@@ -384,7 +384,7 @@ In the future, it would be exciting to integrate personalized medication recomme
 
 ![image](https://github.com/DigiBP/Team-Ricola/assets/95039367/89074b44-a79e-43e7-828e-0cb6210f4f96)
 
-## On a less serious note: 
+## On a less serious note
 
 We really put our chatbot through the wringer, here is a visual representation of the immense number of tokens - we even bought Voiceflow Pro - we invested to creating our chatbot, symbolizing the extensive effort and dedication invested in its development. 
 
