@@ -31,7 +31,7 @@
   
 ## How to run
 1. Start [Medication Stock API Notebook 'Medication API'](https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%202-73dce108c691468dbef96242504c074b?) (! Watch out, it sometimes stopps on its own!).
-2. Open [Chatbot: Voiceflow](https://digibp.github.io/Team-Ricola/).
+2. Open [Chatbot: Voiceflow](https://www.voiceglow.org/app/na/prototype?vg_id=7k8192y09).
 3. Depending on your interaction with the Chatbot user tasks are created in [Camunda](https://digibp.herokuapp.com/). (Username: sarahmeyer, Password: password)
 4. Check the PharmacAI Google Docs, where the Invoice information is written in a [Google Sheets](https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0) and an [Invoice](https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit) is automatically generated.
 
@@ -43,7 +43,7 @@
 ### Links 🔗
 - [Camunda](https://digibp.herokuapp.com/)
 - [Medication Stock API](https://deepnote.com/workspace/sarah-0641-c9908259-8add-4a78-8c29-a62d49bf7322/project/PharmacAI-46d040bc-851a-49ab-a8fb-23c965475dff/notebook/Notebook%202-73dce108c691468dbef96242504c074b?)
-- [Chatbot: Voiceflow](https://digibp.github.io/Team-Ricola/)
+- [Chatbot: Voiceflow](https://www.voiceglow.org/app/na/prototype?vg_id=7k8192y09)
 - [PharmacAI Accounting: Google Sheets](https://docs.google.com/spreadsheets/d/1m85WdAdZekZGYzg_zqUK3-oxw_vHrMGVca3PIfGTiGI/edit#gid=0)
 - [PharmacAI Invoice: Google Docs](https://docs.google.com/document/d/1RQujRKo-LbhSIdR-f65h1rv7RCbUMfGgSWIspmm3TJ0/edit)
 - [PharmacAI Google Calendar](https://calendar.google.com/calendar/u/0?cid=cGhhcm1hY2Fpcmljb2xhQGdtYWlsLmNvbQ)
