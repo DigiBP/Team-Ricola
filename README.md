@@ -387,8 +387,10 @@ In the future, it would be exciting to integrate personalized medication recomme
 
 ## On a less serious note: 
 
+We really put our chatbot through the wringer, here is a visual representation of the immense number of tokens - we even bought Voiceflow Pro - we invested to creating our chatbot, symbolizing the extensive effort and dedication invested in its development. 
+
+
 <img width="50%" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/60508037/f0aa8c1c-4872-481c-b3ed-db9e2c4e0172">
 
 ![Bildschirmfoto 2023-12-06 um 19 58 05](https://github.com/DigiBP/Team-Ricola/assets/60508037/fe8332f8-87f6-4735-987e-c3f398833ac6)
 
-A visual representation of the immense number of tokens utilized in creating our chatbot, symbolizing the extensive effort and dedication invested in its development.
