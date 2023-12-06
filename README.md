@@ -119,7 +119,9 @@ ___________
 ___________
 
 ## To-Be Process
-![image](https://github.com/DigiBP/Team-Ricola/assets/60508037/40128c26-ecbe-4d78-9bde-4d8ca2039045)
+
+<img width="1308" alt="image" src="https://github.com/DigiBP/Team-Ricola/assets/95039367/db3e3545-51f3-40d2-87b6-24508758cefb">
+
 
 
 1. **Service Start:**
